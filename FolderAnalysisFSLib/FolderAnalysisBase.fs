@@ -3,8 +3,6 @@
 open System.Collections.Generic
 open FolderAnalysisTools
 
-//exception NotAnalyzedYetException of string
-
 [<Class>]
 type FolderAnalysisBase(path) =
     let _dirTreeHistory = new Stack<Dir>()
