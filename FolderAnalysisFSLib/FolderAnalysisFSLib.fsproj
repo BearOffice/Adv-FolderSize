@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="ByteMeasure.fs" />
+    <Compile Include="NotAnalyzedYetException.fs" />
+    <Compile Include="FolderAnalysisTools.fs" />
+    <Compile Include="FolderAnalysisBase.fs" />
+  </ItemGroup>
+
+</Project>

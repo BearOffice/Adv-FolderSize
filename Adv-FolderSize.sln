@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adv-FolderSize", "Adv-FolderSize\Adv-FolderSize.csproj", "{50E3AA47-DCF6-4C5B-969D-9D1744B13A9D}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FolderAnalysisFSLib", "FolderAnalysisFSLib\FolderAnalysisFSLib.fsproj", "{BA6F8578-098B-438E-A2ED-630267396879}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50E3AA47-DCF6-4C5B-969D-9D1744B13A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E3AA47-DCF6-4C5B-969D-9D1744B13A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E3AA47-DCF6-4C5B-969D-9D1744B13A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E3AA47-DCF6-4C5B-969D-9D1744B13A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA6F8578-098B-438E-A2ED-630267396879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6F8578-098B-438E-A2ED-630267396879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA6F8578-098B-438E-A2ED-630267396879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA6F8578-098B-438E-A2ED-630267396879}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38342B4B-018B-4E83-9286-0458B30F2D79}
+	EndGlobalSection
+EndGlobal
