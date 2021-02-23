@@ -52,7 +52,7 @@ namespace Adv_FolderSize
             else
                 return "";
         }
-            
+
 
         private static string DirAbbrevName(string path)
             => Path.DirectorySeparatorChar + Path.GetFileName(path);
@@ -90,10 +90,10 @@ namespace Adv_FolderSize
                     case "D":
                         ColorConsole.Write(
                             $"{SizeBar(dirsizestand, size, 16),16} {ByteMeasure.byteToString(measure, size),10} "
-                            , ConsoleColor.Cyan, asline: false);
+                            , ConsoleColor.Cyan);
                         Console.Write($"{diridx.Repeat(depth)}{sym}");
 
-                        var print = "";
+                        string print;
                         if (idxcount == -1)
                         {
                             print = name;
@@ -102,26 +102,27 @@ namespace Adv_FolderSize
                         else if (depth == 1)
                         {
                             _selectableTree.Add(name);
-                            print = $"[{idxcount}] {DirAbbrevName(name)}";
+                            ColorConsole.Write($"{idxcount} ", ConsoleColor.DarkYellow);
+                            print = DirAbbrevName(name);
                             idxcount++;
                         }
                         else
                         {
                             print = DirAbbrevName(name);
                         }
-                        ColorConsole.Write(print, ConsoleColor.Cyan);
+                        ColorConsole.WriteLine(print, ConsoleColor.Cyan);
                         break;
                     case "FH":
                         Console.Write($"{"",16} {"",-10} {tabidx.Repeat(depth)}{sym}");
-                        ColorConsole.Write($"... {name} files are hided", ConsoleColor.Yellow);
+                        ColorConsole.WriteLine($"... {name} files are hided", ConsoleColor.Yellow);
                         break;
                     case "DH":
                         Console.Write($"{"",16} {"",-10} {tabidx.Repeat(depth + 1)}{sym}");
-                        ColorConsole.Write($"... {name} directories are hided", ConsoleColor.Yellow);
+                        ColorConsole.WriteLine($"... {name} directories are hided", ConsoleColor.Yellow);
                         break;
                     case "DF":
                         Console.Write($"{"",16} {"",-10} {tabidx.Repeat(depth + 1)}{sym}");
-                        ColorConsole.Write($"... {name} directories above this directory are folded", ConsoleColor.Yellow);
+                        ColorConsole.WriteLine($"... {name} directories above this directory are folded", ConsoleColor.Yellow);
                         break;
                     default:
                         break;
@@ -141,10 +142,11 @@ namespace Adv_FolderSize
             {
                 var name = item.Item1;
                 var size = item.Item2;
-                ColorConsole.Write(
-                    $"{SizeBar(dirsizestand, size, 16),16} {ByteMeasure.byteToString(measure, size),10} " +
-                    $"[{idxcount}] {name}"
-                    , ConsoleColor.Cyan);
+
+                ColorConsole.Write($"{SizeBar(dirsizestand, size, 16),16} {ByteMeasure.byteToString(measure, size),10} ",
+                    ConsoleColor.Cyan);
+                ColorConsole.Write($"[{idxcount}] ", ConsoleColor.DarkYellow);
+                ColorConsole.WriteLine(name, ConsoleColor.Cyan);
 
                 _selectableList.Add(name);
                 idxcount++;
@@ -163,9 +165,10 @@ namespace Adv_FolderSize
             {
                 var name = item.Item1;
                 var size = item.Item2;
-                Console.WriteLine(
-                    $"{SizeBar(filesizestand, size, 16),16} {ByteMeasure.byteToString(measure, size),10} " +
-                    $"[{idxcount}] {name}");
+
+                Console.Write($"{SizeBar(filesizestand, size, 16),16} {ByteMeasure.byteToString(measure, size),10} ");
+                ColorConsole.Write($"[{idxcount}] ", ConsoleColor.DarkYellow);
+                Console.WriteLine(name);
 
                 _selectableList.Add(name);
                 idxcount++;
