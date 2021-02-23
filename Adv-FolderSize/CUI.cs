@@ -117,15 +117,15 @@ Enter exit(e) to exit";
                     if (!_fA.RedirectTo(int.Parse(opt[0])))
                         throw new IndexOutOfRangeException("The specified index does not exist.");
 
-                    Console.WriteLine($"Redirected to [{opt[0]}].");
-                    WriteSuggest(_cmdTree, _cmdBack);
+                    _fA.PrintDirTree("AUTO", 2, 3, 1);
+                    WriteSuggest(_cmdTree, _cmdRed, _cmdBack);
                     break;
                 case "BACK" or "B":
                     if (!_fA.Back())
                         throw new IndexOutOfRangeException("Can not go back anymore.");
 
-                    Console.WriteLine($"Backed to the previous directory.");
-                    WriteSuggest(_cmdTree, _cmdRed);
+                    _fA.PrintDirTree("AUTO", 2, 3, 1);
+                    WriteSuggest(_cmdTree, _cmdRed, _cmdBack);
                     break;
                 case "OPEN" or "O":
                     string path;
