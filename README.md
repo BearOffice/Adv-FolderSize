@@ -1,6 +1,6 @@
 # Adv-FolderSize
  Analyze the folder size quickly(win/macOS). Help to find out the big files and folders.  
- 20 times faster then the [previous gen](https://github.com/MisakiBear/Folder-Size)(which is stupidly slow).  
+ Framework: .Net 6.0
    
 # Help
 <pre>
